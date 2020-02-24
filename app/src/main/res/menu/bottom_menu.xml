@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_listrumah"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Page1"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_arcamera"
+        android:enabled="true"
+        android:title="AR Camera"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_informasi"
+        android:enabled="true"
+        android:icon="@drawable/info"
+        android:title="Informasi"
+        app:showAsAction="ifRoom"/>
+</menu>
