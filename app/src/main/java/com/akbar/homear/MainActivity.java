@@ -1,9 +1,12 @@
 package com.akbar.homear;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private RecyclerView rvWisata;
     private ArrayList<Wisata> list = new ArrayList<>();
@@ -24,7 +27,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setActionBarTitle(title);
+        //setActionBarTitle(title);
+        getSupportActionBar().setElevation(0);
 
         rvWisata = findViewById(R.id.rv_wisata);
         rvWisata.setHasFixedSize(true);
@@ -37,6 +41,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //getting bottom navigation view and attaching the listener
         mView.setOnNavigationItemSelectedListener(MainActivity.this);
 
+        LinearLayout denah = findViewById(R.id.denah);
+        LinearLayout lokasi = findViewById(R.id.lokasi);
+        LinearLayout kontak = findViewById(R.id.kontak);
+        LinearLayout video = findViewById(R.id.video);
+
+        denah.setOnClickListener(this);
+        lokasi.setOnClickListener(this);
+        kontak.setOnClickListener(this);
+        video.setOnClickListener(this);
 
     }
 
@@ -107,5 +120,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.denah:
+                break;
+            case R.id.lokasi:
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=-2.975687,104.700613(Mutiara+Barangan)");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+
+                break;
+
+        }
     }
 }

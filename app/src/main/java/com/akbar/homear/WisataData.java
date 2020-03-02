@@ -11,9 +11,9 @@ public class WisataData {
     };
 
     private static int[] heroesImages = {
-            R.drawable.rtp36,
-            R.drawable.rtp38,
-            R.drawable.tpe36st,
+            R.drawable.r1,
+            R.drawable.r2,
+            R.drawable.r3,
     };
 
     private static String[] wisataLocation = {

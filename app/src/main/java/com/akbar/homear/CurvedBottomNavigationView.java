@@ -58,7 +58,7 @@ public class CurvedBottomNavigationView extends BottomNavigationView {
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
-        mPaint.setColor(Color.rgb(223,242,255));
+        mPaint.setColor(Color.rgb(255,255,255));
         setBackgroundColor(Color.TRANSPARENT);
     }
 

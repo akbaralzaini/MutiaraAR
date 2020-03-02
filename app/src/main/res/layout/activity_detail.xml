@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffff"
     tools:context=".DetailActivity">
 
     <LinearLayout
@@ -13,9 +14,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="244dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/candi"
+            android:layout_height="280dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/r1"
             android:id="@+id/foto"/>
         <LinearLayout
             android:layout_width="match_parent"
