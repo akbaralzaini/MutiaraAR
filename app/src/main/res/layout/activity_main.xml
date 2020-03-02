@@ -120,6 +120,7 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="40dp"
         android:scaleType="center"
+        android:id="@+id/camera_ar"
         android:src="@drawable/play">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -45,11 +46,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         LinearLayout lokasi = findViewById(R.id.lokasi);
         LinearLayout kontak = findViewById(R.id.kontak);
         LinearLayout video = findViewById(R.id.video);
+        FloatingActionButton CameraAr = findViewById(R.id.camera_ar);
 
         denah.setOnClickListener(this);
         lokasi.setOnClickListener(this);
         kontak.setOnClickListener(this);
         video.setOnClickListener(this);
+        CameraAr.setOnClickListener(this);
 
     }
 
@@ -117,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 startActivity(intent);
                 break;
             case R.id.action_informasi:
+                Intent intentinfo = new Intent(this,InformasiActivity.class);
+                startActivity(intentinfo);
                 break;
         }
         return true;
@@ -126,13 +131,27 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.denah:
+                Intent moveIntent = new Intent(MainActivity.this, DenahActivity.class);
+                startActivity(moveIntent);
                 break;
             case R.id.lokasi:
                 Uri gmmIntentUri = Uri.parse("geo:0,0?q=-2.975687,104.700613(Mutiara+Barangan)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
-
+                break;
+            case R.id.kontak :
+                Intent KontakIntent = new Intent(MainActivity.this, ProfilActivity.class);
+                startActivity(KontakIntent);
+                break;
+            case R.id.video:
+                Intent videoIntent = new Intent(MainActivity.this, VideoActivity.class);
+                startActivity(videoIntent);
+                break;
+            case R.id.camera_ar:
+                Intent intent = new Intent(this, UnityPlayerActivity.class);
+                intent.putExtra("arguments", "data from android");
+                startActivity(intent);
                 break;
 
         }
