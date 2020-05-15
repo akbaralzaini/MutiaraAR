@@ -14,19 +14,62 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:src="@drawable/akbaralzaini"
+            android:src="@drawable/logokhsm"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="4dp"
             android:scaleType="centerCrop"
             android:layout_marginTop="50dp"
             android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PT. Kurnia Hamusri Sukses Mandiri"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perumahan Mutiara Barangan 1 Blok A NO2 RT 2 RW 3 Kel. Bukit Baru Ilir Barat 1."
+            android:gravity="center"
+            android:layout_margin="12dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kontak Marketing:"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="12dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rika  (085267288564)"
+            android:gravity="center"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pratiwi  (089678165240)"
+            android:gravity="center"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi Dikembangkan Oleh:"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:textSize="18sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Akbar Alzaini"
             android:gravity="center"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
             android:textSize="18sp"/>
         <TextView
             android:layout_width="match_parent"
