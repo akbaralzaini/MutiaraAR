@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 startActivity(mapIntent);
                 break;
             case R.id.kontak :
-                Intent KontakIntent = new Intent(MainActivity.this, ProfilActivity.class);
+                Intent KontakIntent = new Intent(MainActivity.this, KontakActivity.class);
                 startActivity(KontakIntent);
                 break;
             case R.id.video:
